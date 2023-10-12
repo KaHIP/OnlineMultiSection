@@ -1,4 +1,7 @@
 # OMS: Online Multi-Section
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/90c5cca9a6384fbbbe28220cb20b8e53)](https://app.codacy.com/gh/KaHIP/OnlineMultiSection/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKaHIP%2FOnlineMultiSection.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2FKaHIP%2FOnlineMultiSection?ref=badge_shield&issueType=license)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Online Multi-Section is a streaming algorithm designed for process mapping and also applicable to standard graph partitioning tasks when no hierarchy is specified.
 It creates a hierarchy of partitioning subproblems reflecting the hierarchical topology of the system, facilitating improved process mapping and solving challenges posed by large-scale and dynamic data processing.
