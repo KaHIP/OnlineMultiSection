@@ -1,4 +1,6 @@
 # OMS: Online Multi-Section
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKaHIP%2FOnlineMultiSection.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FKaHIP%2FOnlineMultiSection?ref=badge_shield)
+
 
 Online Multi-Section is a streaming algorithm designed for process mapping and also applicable to standard graph partitioning tasks when no hierarchy is specified.
 It creates a hierarchy of partitioning subproblems reflecting the hierarchical topology of the system, facilitating improved process mapping and solving challenges posed by large-scale and dynamic data processing.
@@ -97,3 +99,6 @@ For a description of the graph METIS format, please have a look at the [KaHiP ma
 
 Online Multi-Section is free software provided under the MIT License.
 
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKaHIP%2FOnlineMultiSection.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FKaHIP%2FOnlineMultiSection?ref=badge_large)
