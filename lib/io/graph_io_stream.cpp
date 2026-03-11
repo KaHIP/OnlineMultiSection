@@ -115,7 +115,7 @@ void graph_io_stream::streamEvaluatePartition(PartitionConfig & config, const st
         std::ifstream in(filename.c_str());
         if (!in) {
                 std::cerr << "Error opening " << filename << std::endl;
-                return 1;
+                return;
         }
         long nmbNodes;
         long nmbEdges;
