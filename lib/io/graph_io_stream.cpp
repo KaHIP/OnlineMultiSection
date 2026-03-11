@@ -204,7 +204,7 @@ void graph_io_stream::writePartitionStream(PartitionConfig & config, const std::
         std::ofstream f(filename.c_str());
         std::cout << "writing partition to " << filename << " ... " << std::endl;
 	
-	for (int node = 0; node < config.stream_nodes_assign->size(); node++) {
+	for (size_t node = 0; node < config.stream_nodes_assign->size(); node++) {
                 f << (*config.stream_nodes_assign)[node] <<  "\n";
         } 
 
@@ -216,22 +216,23 @@ void graph_io_stream::readPartition(PartitionConfig & config, const std::string 
 
 	// open file for reading                                                             
 		std::ifstream in(filename.c_str());                                                  
-	if (!in) {                                                                           
-		std::cerr << "Error opening file" << filename << std::endl;                  
-		return 1;                                                                    
+	if (!in) {
+		std::cerr << "Error opening file" << filename << std::endl;
+		return;
 	}                                                                                    
 
 	PartitionID max = 0;                                                                 
-	for (auto& node : (*config.stream_nodes_assign)) {                                   
-		// fetch current line                                                        
-		std::getline(in, line);                                                      
-		while (line[0] == '%') { //Comments                                          
-			std::getline(in, line);                                              
-		}                                                                            
-		node = (PartitionID) atol(line.c_str());                                     
-		(*config.stream_blocks_weight)[node] += 1;                                   
+	for (auto& node : (*config.stream_nodes_assign)) {
+		// fetch current line
+		std::getline(in, line);
+		while (line[0] == '%') { //Comments
+			std::getline(in, line);
+		}
+		PartitionID partID = (PartitionID) atol(line.c_str());
+		node = partID;
+		(*config.stream_blocks_weight)[partID] += 1;
 
-		if(node > max) max = node;                                                   
+		if(partID > max) max = partID;                                                   
 	}                                                                                    
 
 	config.k = max+1;                                                                    
