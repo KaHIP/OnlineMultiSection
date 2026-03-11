@@ -26,7 +26,7 @@ OMS 1.00
 | **What it solves** | Streaming process mapping and graph partitioning for large-scale hierarchical topologies |
 | **Techniques** | Recursive multi-section, Fennel scoring, OpenMP parallelization, multi-pass restreaming |
 | **Interfaces** | CLI (`streammultisection`) |
-| **Requires** | C++17, CMake 3.10+, MPI, OpenMP |
+| **Requires** | C++17, CMake 3.10+, OpenMP |
 
 ## Quick Start
 
