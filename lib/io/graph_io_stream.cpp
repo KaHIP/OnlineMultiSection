@@ -228,11 +228,11 @@ void graph_io_stream::readPartition(PartitionConfig & config, const std::string 
 		while (line[0] == '%') { //Comments
 			std::getline(in, line);
 		}
-		PartitionID partID = (PartitionID) atol(line.c_str());
-		node = partID;
-		(*config.stream_blocks_weight)[partID] += 1;
+		PartitionID block = (PartitionID) atol(line.c_str());
+		node = block;
+		(*config.stream_blocks_weight)[block] += 1;
 
-		if(partID > max) max = partID;                                                   
+		if(block > max) max = block;                                                   
 	}                                                                                    
 
 	config.k = max+1;                                                                    
