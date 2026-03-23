@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowStrong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1017"/>
+      <stop offset="100%" stop-color="#1a1d23"/>
+    </linearGradient>
+    <linearGradient id="dividerGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00bcd4" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#00bcd4" stop-opacity="0.15"/>
+      <stop offset="70%" stop-color="#f39c12" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#f39c12" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.03">
+    <line x1="0" y1="160" x2="1280" y2="160" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="320" x2="1280" y2="320" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="480" x2="1280" y2="480" stroke="#fff" stroke-width="1"/>
+    <line x1="320" y1="0" x2="320" y2="640" stroke="#fff" stroke-width="1"/>
+    <line x1="640" y1="0" x2="640" y2="640" stroke="#fff" stroke-width="1"/>
+    <line x1="960" y1="0" x2="960" y2="640" stroke="#fff" stroke-width="1"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- LEFT SIDE: Hierarchical graph diagram (scaled up from banner) -->
+  <!-- ============================================================ -->
+
+  <!-- Stream input -->
+  <line x1="60" y1="120" x2="180" y2="120" stroke="#555" stroke-width="2.5"/>
+  <polygon points="176,114 190,120 176,126" fill="#666"/>
+  <text x="120" y="105" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#666" letter-spacing="2">stream</text>
+
+  <!-- Streaming nodes (incoming) -->
+  <circle cx="70" cy="120" r="6" fill="#666" opacity="0.2" filter="url(#glow)"/>
+  <circle cx="95" cy="120" r="7" fill="#888" opacity="0.35" filter="url(#glow)"/>
+  <circle cx="125" cy="120" r="8" fill="#aaa" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="158" cy="120" r="9" fill="#bbb" opacity="0.65" filter="url(#glow)"/>
+  <circle cx="195" cy="120" r="10" fill="#ddd" opacity="0.85" filter="url(#glow)"/>
+
+  <!-- Root level: full graph -->
+  <rect x="210" y="85" width="90" height="70" rx="8" ry="8" fill="#ddd" fill-opacity="0.06" stroke="#ddd" stroke-opacity="0.18" stroke-width="1.5"/>
+  <circle cx="233" cy="108" r="7" fill="#ddd" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="258" cy="125" r="7" fill="#ddd" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="278" cy="105" r="7" fill="#ddd" opacity="0.6" filter="url(#glow)"/>
+  <line x1="233" y1="108" x2="258" y2="125" stroke="#888" stroke-opacity="0.3" stroke-width="1.5"/>
+  <line x1="258" y1="125" x2="278" y2="105" stroke="#888" stroke-opacity="0.3" stroke-width="1.5"/>
+  <line x1="233" y1="108" x2="278" y2="105" stroke="#888" stroke-opacity="0.3" stroke-width="1.5"/>
+  <text x="255" y="75" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#666">graph</text>
+
+  <!-- Split arrows from root -->
+  <path d="M300,100 Q335,100 355,185" fill="none" stroke="#00bcd4" stroke-width="2" stroke-dasharray="5,3" stroke-opacity="0.5"/>
+  <path d="M300,140 Q335,140 355,310" fill="none" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,3" stroke-opacity="0.5"/>
+
+  <!-- Level 1 label -->
+  <text x="405" y="155" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#666">level 1</text>
+
+  <!-- Section A (cyan) -->
+  <rect x="355" y="170" width="110" height="80" rx="8" ry="8" fill="#00bcd4" fill-opacity="0.06" stroke="#00bcd4" stroke-opacity="0.2" stroke-width="1.5"/>
+  <circle cx="380" cy="200" r="8" fill="#00bcd4" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="415" cy="190" r="8" fill="#00bcd4" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="440" cy="210" r="8" fill="#00bcd4" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="408" cy="230" r="8" fill="#00bcd4" opacity="0.7" filter="url(#glow)"/>
+  <line x1="380" y1="200" x2="415" y2="190" stroke="#00bcd4" stroke-opacity="0.25" stroke-width="1.5"/>
+  <line x1="415" y1="190" x2="440" y2="210" stroke="#00bcd4" stroke-opacity="0.25" stroke-width="1.5"/>
+  <line x1="380" y1="200" x2="408" y2="230" stroke="#00bcd4" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <!-- Section B (amber) -->
+  <rect x="355" y="295" width="110" height="80" rx="8" ry="8" fill="#f39c12" fill-opacity="0.06" stroke="#f39c12" stroke-opacity="0.2" stroke-width="1.5"/>
+  <circle cx="380" cy="325" r="8" fill="#f39c12" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="415" cy="315" r="8" fill="#f39c12" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="440" cy="335" r="8" fill="#f39c12" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="408" cy="355" r="8" fill="#f39c12" opacity="0.7" filter="url(#glow)"/>
+  <line x1="380" y1="325" x2="415" y2="315" stroke="#f39c12" stroke-opacity="0.25" stroke-width="1.5"/>
+  <line x1="415" y1="315" x2="440" y2="335" stroke="#f39c12" stroke-opacity="0.25" stroke-width="1.5"/>
+  <line x1="380" y1="325" x2="408" y2="355" stroke="#f39c12" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <!-- Level 2 split arrows from Section A -->
+  <path d="M465,195 Q495,195 510,170" fill="none" stroke="#3498db" stroke-width="1.8" stroke-dasharray="5,3" stroke-opacity="0.5"/>
+  <path d="M465,235 Q495,235 510,265" fill="none" stroke="#2ecc71" stroke-width="1.8" stroke-dasharray="5,3" stroke-opacity="0.5"/>
+
+  <!-- Level 2 split arrows from Section B -->
+  <path d="M465,320 Q495,320 510,385" fill="none" stroke="#e74c3c" stroke-width="1.8" stroke-dasharray="5,3" stroke-opacity="0.5"/>
+  <path d="M465,360 Q495,360 510,470" fill="none" stroke="#9b59b6" stroke-width="1.8" stroke-dasharray="5,3" stroke-opacity="0.5"/>
+
+  <!-- Level 2 label -->
+  <text x="555" y="135" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#666">level 2</text>
+
+  <!-- Block 1 (blue) -->
+  <rect x="510" y="145" width="105" height="60" rx="8" ry="8" fill="#3498db" fill-opacity="0.06" stroke="#3498db" stroke-opacity="0.18" stroke-width="1.5"/>
+  <circle cx="540" cy="175" r="9" fill="#3498db" filter="url(#glow)"/>
+  <circle cx="580" cy="167" r="9" fill="#3498db" filter="url(#glow)"/>
+  <path d="M540,175 Q560,160 580,167" fill="none" stroke="#3498db" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Block 2 (green) -->
+  <rect x="510" y="240" width="105" height="60" rx="8" ry="8" fill="#2ecc71" fill-opacity="0.06" stroke="#2ecc71" stroke-opacity="0.18" stroke-width="1.5"/>
+  <circle cx="540" cy="270" r="9" fill="#2ecc71" filter="url(#glow)"/>
+  <circle cx="580" cy="262" r="9" fill="#2ecc71" filter="url(#glow)"/>
+  <path d="M540,270 Q560,255 580,262" fill="none" stroke="#2ecc71" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Block 3 (red) -->
+  <rect x="510" y="360" width="105" height="60" rx="8" ry="8" fill="#e74c3c" fill-opacity="0.06" stroke="#e74c3c" stroke-opacity="0.18" stroke-width="1.5"/>
+  <circle cx="540" cy="390" r="9" fill="#e74c3c" filter="url(#glow)"/>
+  <circle cx="580" cy="382" r="9" fill="#e74c3c" filter="url(#glow)"/>
+  <path d="M540,390 Q560,375 580,382" fill="none" stroke="#e74c3c" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Block 4 (purple) -->
+  <rect x="510" y="450" width="105" height="60" rx="8" ry="8" fill="#9b59b6" fill-opacity="0.06" stroke="#9b59b6" stroke-opacity="0.18" stroke-width="1.5"/>
+  <circle cx="540" cy="480" r="9" fill="#9b59b6" filter="url(#glow)"/>
+  <circle cx="580" cy="472" r="9" fill="#9b59b6" filter="url(#glow)"/>
+  <path d="M540,480 Q560,465 580,472" fill="none" stroke="#9b59b6" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Legend (bottom left) -->
+  <circle cx="80" cy="560" r="7" fill="#3498db" opacity="0.7"/>
+  <text x="95" y="564" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#888">PE 1</text>
+  <circle cx="160" cy="560" r="7" fill="#2ecc71" opacity="0.7"/>
+  <text x="175" y="564" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#888">PE 2</text>
+  <circle cx="240" cy="560" r="7" fill="#e74c3c" opacity="0.7"/>
+  <text x="255" y="564" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#888">PE 3</text>
+  <circle cx="320" cy="560" r="7" fill="#9b59b6" opacity="0.7"/>
+  <text x="335" y="564" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#888">PE 4</text>
+
+  <!-- Bottom description -->
+  <text x="340" y="600" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#555">
+    recursive multi-section for hierarchical process mapping
+  </text>
+
+  <!-- Vertical divider -->
+  <line x1="660" y1="60" x2="660" y2="580" stroke="url(#dividerGrad)" stroke-width="1.5"/>
+
+  <!-- ============================================================ -->
+  <!-- RIGHT SIDE: Title and text                                    -->
+  <!-- ============================================================ -->
+
+  <!-- Title: "Online" -->
+  <text x="700" y="250" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="bold" font-size="76">
+    <tspan fill="#00bcd4">O</tspan><tspan fill="#e8e8e8">nline</tspan>
+  </text>
+
+  <!-- Title: "MultiSection" -->
+  <text x="700" y="336" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="bold" font-size="76">
+    <tspan fill="#f39c12">M</tspan><tspan fill="#e8e8e8">ulti</tspan><tspan fill="#e74c3c">S</tspan><tspan fill="#e8e8e8">ection</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="705" y="388" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#aaaaaa" letter-spacing="1.5">
+    Streaming Process Mapping
+  </text>
+
+  <!-- Part of KaHIP badge -->
+  <rect x="703" y="420" width="185" height="40" rx="20" ry="20" fill="#5a7a5a" fill-opacity="0.3" stroke="#5a7a5a" stroke-opacity="0.45" stroke-width="1.5"/>
+  <text x="795" y="446" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#8faa8f">Part of KaHIP</text>
+
+</svg>
